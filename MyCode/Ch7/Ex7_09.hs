@@ -14,14 +14,16 @@ import Ch7Libs
 
 -- find min/max of a number list using iSort
 maxFromListiSort :: [Int] -> Int
-maxFromListiSort intList = firstSorted where
-  sortedList  = iSort intList
-  firstSorted = head (reverse sortedList)
+maxFromListiSort intList = firstSorted
+  where
+    sortedList  = iSort intList
+    firstSorted = head (reverse sortedList)
 
 minFromListiSort :: [Int] -> Int
-minFromListiSort intList = firstSorted where
-  sortedList  = iSort intList
-  firstSorted = head sortedList
+minFromListiSort intList = firstSorted
+  where
+    sortedList  = iSort intList
+    firstSorted = head sortedList
 
 -- same w/o iSort
 maxFromList :: [Int] -> Int

@@ -19,9 +19,10 @@ elemNumPR x (y:ys)
 
 -- define without using primitive recursion
 elemNumNoPR :: Int -> [Int] -> Int
-elemNumNoPR x intList = xCountInIntList where
-  xCountInIntList  = length listOfJustXs
-  listOfJustXs     = [ a | a <- intList, a == x ]
+elemNumNoPR x intList = xCountInIntList
+  where
+    xCountInIntList = length listOfJustXs
+    listOfJustXs    = [ a | a <- intList, a == x ]
 
 -- alias for ease of use
 elemNum :: Int -> [Int] -> Int

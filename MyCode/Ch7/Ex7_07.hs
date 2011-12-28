@@ -21,8 +21,9 @@ uniqueLC intList = [ x | x <- intList, elemNum x intList == 1 ]
 -- return a list with only singletons, w/o LC
 -- remove all copies of any elements that occur multiple times
 uniqueNoLC :: [Int] -> [Int]
-uniqueNoLC intList = filter appearsOnlyOnce intList where
-  appearsOnlyOnce = (\x -> elemNum x intList == 1)
+uniqueNoLC intList = filter appearsOnlyOnce intList
+  where
+    appearsOnlyOnce = (\x -> elemNum x intList == 1)
 
 unique :: [Int] -> [Int]
 unique = uniqueLC
